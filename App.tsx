@@ -76,7 +76,7 @@ export default function App() {
   return (
     <SafeAreaView>
       <View style={{ flex: 1 }}>
-        <Text style={styles.version}>Pillcheck v1.0.0</Text>
+        <Text style={styles.version}>Lockcheck v1.0.0</Text>
 
         {isLoading && <ActivityIndicator color={colors.primary} />}
 
@@ -101,7 +101,7 @@ export default function App() {
           {pillLogs.map((log) => (
             <Container key={log.id} style={styles.logContainer}>
               <View style={styles.row}>
-                <Text style={{ fontWeight: "bold" }}>Took a pill </Text>
+                <Text style={{ fontWeight: "bold" }}>Locked a door </Text>
                 <Text> about {moment(log.time).fromNow()}</Text>
               </View>
             </Container>
@@ -116,7 +116,7 @@ export default function App() {
             style={styles.button}
           >
             <MaterialCommunityIcons
-              name="pill"
+              name="door-closed-lock"
               size={42}
               color={colors.primary}
             />
